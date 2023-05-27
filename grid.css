@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family:'Poppins';
+}
+ .page1{
+    height: 100vh;
+    background-image: url(images/bg-desktop.svg);
+    background-color: rgb(20, 20, 116);
+    background-position: center;
+    background-size: cover;
+ }
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 0.4fr 1fr 0.3fr;
+    grid-template-areas: "logo logo"
+    "graphic content"
+    "footer footer";
+    /* gap: 20px; */
+}
+/* .grid-container>*{
+    border: 2px solid white;
+} */
+.logo{
+    grid-area: logo;
+    
+}
+.logo img{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.graphic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    
+}
+.graphic img{
+    max-width: 100%;
+    min-width: 70%;
+    height: auto;
+    /* transform: translate(50px, 60px); */
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15%;
+    margin-left: -25px;
+}
+.content b{
+    font-size: 45px;
+}
+.content p{
+    margin-top: 1rem;
+}
+.footer{
+
+    grid-area: footer;
+    margin-right: 10%;
+}
+.footer a img {
+    max-width: 40px;
+    float: right;
+    margin-right: 10px;
+    background-color: aliceblue;
+  }
+ .content button{
+    align-self: flex-start;
+    margin-top: 1rem;
+    width: 10rem;
+     height: 2.5rem;
+    border-radius: 1rem;
+    border: 0px;
+    color:rgb(20, 20, 116);
+ }
+ 
+
+@media screen and (max-width:800px){
+    .page1{
+        background-image: url(images/bg-mobile.svg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-items: center;
+        text-align: center;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 1fr 1fr;
+        grid-template-areas: "logo""graphics""content""footer";
+    }
+    .graphic img{
+      transform: translate(0px,0px);
+    }
+    .content b{
+        font-size: 23px; 
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .logo img{
+        float: left;
+       max-width: 142px;
+       height: auto;
+    }
+    .content button{
+    align-self: center;
+    }
+    .footer a img {
+        transform: translateX(-110px);
+    }
+}
