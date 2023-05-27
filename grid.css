@@ -6,7 +6,7 @@
 }
  .page1{
     height: 100vh;
-    background-image: url(bg-desktop.svg);
+    background-image: url(images/bg-desktop.svg);
     background-color: rgb(20, 20, 116);
     background-position: center;
     background-size: cover;
@@ -100,6 +100,9 @@
     .graphic img{
       transform: translate(0px,0px);
     }
+    .content{
+        margin-top: -35px;
+    }
     .content b{
         font-size: 23px; 
     }
@@ -115,7 +118,11 @@
     .content button{
     align-self: center;
     }
+    .footer{
+        margin-top: -15px;
+    }
     .footer a img {
         transform: translateX(-110px);
+        max-width: 25px;
     }
 }
